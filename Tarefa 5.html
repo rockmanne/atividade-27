@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5 - Lógica de Programação com JavaScript</title>
+    <style>
+        :root {
+            --primary: #0de065;
+            --secondary: #11088b;
+            --accent: #fd79a8;
+            --light: #f8f9fa;
+            --dark: #2d3436;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+        }
+
+        .conceito-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .code-example {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .resultado {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            min-height: 50px;
+            border: 1px dashed var(--primary);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 TAREFA: Lógica de Programação com JavaScript</h1>
+
+        <div class="conceito-box">
+            <h2>🤔 O que é Lógica de Programação?</h2>
+            <p>É a forma como organizamos nosso pensamento para resolver problemas usando código. É como uma receita de
+                bolo para o computador!</p>
+        </div>
+
+        <div class="conceito-box">
+            <h3>🔤 If Else e Loop</h3>
+            <p>Verificar uma condição com IF E loop FOR organizado, com começo, meio e fim. </p>
+
+
+        </div>
+        <div class="demo-box">
+            <h3>🔢 Avaliador de Números</h3>
+            <p>Digite um número e veja se cada valor é par ou ímpar:</p>
+
+            <!--Crie uma caixa de texto do tipo numero com placeholder para digitar numeros-->
+           
+            <!--Crie uum botao chamando a função abaixo avaliarNumeros()-->
+            
+
+            <div class="resultado" id="resultado-numeros"></div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function avaliarNumeros() {
+            //crie e variavel limiete e pegue com ajuda do parseInt o valor da caixa de texto
+            
+            
+            let resultado = "";
+
+            if (isNaN(limite) || limite < 0) {
+                resultado = "⚠️ Digite um número válido maior ou igual a zero!";
+            } else {
+                //escolha o bloco de codigo correto e descomente removendo /**/
+
+                //bloco 1
+                /*for (let i = 0; i <= limite; i++) {
+                    
+                    else if (i % 2 === 0) {
+                        resultado += `🟢 Número ${i} é PAR<br>`;
+                    } else {
+                        resultado += `🔵 Número ${i} é ÍMPAR<br>`;
+                    }
+                }*/
+
+                //bloco 2
+                /*for (let i = 0; i <= limite; i++) {
+                    if (i === 0) {
+                        resultado += "⚠️ Zero é neutro<br>";
+                    } else if (i % 2 === 0) {
+                        resultado += `🟢 Número ${i} é PAR<br>`;
+                    } else {
+                        resultado += `🔵 Número ${i} é ÍMPAR<br>`;
+                    }
+                }*/
+
+                //bloco 3
+                /*for (let i = 0; i <= limite; i++) {
+                    if (i === 0) {
+                        resultado += "⚠️ Zero é neutro<br>";
+                    } else if (i % 2 === 0) {
+                        resultado += `🟢 Número ${i} é PAR<br>`;
+                    }
+                }*/
+            }
+
+            document.getElementById("resultado-numeros").innerHTML = resultado;
+        }
+    </script>
+
+</body>
