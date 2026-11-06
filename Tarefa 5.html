@@ -125,9 +125,9 @@
             <p>Digite um número e veja se cada valor é par ou ímpar:</p>
 
             <!--Crie uma caixa de texto do tipo numero com placeholder para digitar numeros-->
-           
+           <input type="number" id="numero" placceholder="Digitar Números">
             <!--Crie uum botao chamando a função abaixo avaliarNumeros()-->
-            
+            <button onclick = "avaliarNumeros()">Avaliar</button>
 
             <div class="resultado" id="resultado-numeros"></div>
         </div>
@@ -139,7 +139,7 @@
     <script>
         function avaliarNumeros() {
             //crie e variavel limiete e pegue com ajuda do parseInt o valor da caixa de texto
-            
+            let limite = parseInt(document.getElementById("numero").value);
             
             let resultado = "";
 
@@ -159,7 +159,7 @@
                 }*/
 
                 //bloco 2
-                /*for (let i = 0; i <= limite; i++) {
+                for (let i = 0; i <= limite; i++) {
                     if (i === 0) {
                         resultado += "⚠️ Zero é neutro<br>";
                     } else if (i % 2 === 0) {
@@ -167,7 +167,7 @@
                     } else {
                         resultado += `🔵 Número ${i} é ÍMPAR<br>`;
                     }
-                }*/
+                }
 
                 //bloco 3
                 /*for (let i = 0; i <= limite; i++) {
